@@ -2,14 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
     <title>Login Page</title>
 </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: #a0a0a0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    form{
+        background-color: #6fbddc;
+        display: flex;
+        flex-direction:column ;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 3rem;
+        padding: 6rem;
+        box-shadow: 4px 3px 3px 4px rgba(0, 0, 0, 0.4);
+        /* gap: 4px; */
+    }
+    form h2{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    form input{
+        margin-top: 4px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 7px;
+    }
+    button{
+        color: #fff;
+        background-color: #f11313;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        margin-top: 10px;
+        /* margin-left: 40%; */
+        margin-right: 80%;
+        border-radius: 6px;
+        font-weight: 700;
+        box-shadow: 7px 5px 5px 4px rgba(0, 0, 0, 0.4);
+    }
+
+</style>
 <body>
-    <div id="root"></div>
-    <script src="login-apk.js"></script>
-    <script src="login-inht.js"></script>
-    <script src="login-loginup.js"></script>
-    <script src="login-signup.js"></script>
+    <form id="signup-form">
+        <h2>Sign Up</h2>
+        <div id="signup-error" style="color: red;"></div>
+        <input type="text" id="signup-first" placeholder=" First Name" aria-required="true" required>
+        <input type="text" id="signup-last" placeholder="Last Name" required>
+        <input type="number" id="signup-number" placeholder="Phone Number" maxlength="10" required>
+        <input type="email" id="signup-email" placeholder="Email" >
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+    <script type="module" src="./login-apk.js"></script>
+    <script type="module" src="./login-signup.js"></script>
 </body>
 </html>
